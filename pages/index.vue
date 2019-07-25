@@ -2,7 +2,7 @@
 <template>
   <div class="home-page">
     <section class="intro">
-      <h1>Get the latest tech news!</h1>
+      <h1>I love my baby boy Adrian!</h1>
     </section>
     <PostList />
   </div>
