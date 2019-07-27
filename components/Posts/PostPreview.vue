@@ -1,6 +1,6 @@
 // components/Posts/PostPreview.vue
 <template>
-  <nuxt-link v-bind:to="'/posts/' + id" class="post-preview">
+  <nuxt-link v-bind:to="postLink" class="post-preview">
     <article>
       <div class="post-thumbnail" v-bind:style="{backgroundImage: 'url(' + thumbnail + ')'}"></div>
       <div class="post-content">
@@ -19,6 +19,10 @@ export default {
       type: String,
       required: true
     },
+    isAdmin: {
+      type: Boolean,
+      required: true
+    },
     title: {
       type: String,
       required: true
@@ -30,6 +34,11 @@ export default {
     thumbnail: {
       type: String,
       required: true
+    }
+  },
+  computed: {
+    postLink() {
+      return this.isAdmin ? "/admin/" + this.id : "/posts/" + this.id;
     }
   }
 };

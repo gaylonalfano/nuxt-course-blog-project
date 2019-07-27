@@ -1,3 +1,4 @@
+// pages/posts/_id/index.vue
 <template>
   <div class="single-post-page">
     <section class="post">

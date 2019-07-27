@@ -3,18 +3,21 @@
   <section class="post-list">
     <PostPreview
       id="1"
+      v-bind:is-admin="isAdmin"
       thumbnail="https://vignette.wikia.nocookie.net/ncaa-athletics/images/7/73/Georgia_Tech_Yellow_Jackets.jpg/revision/latest?cb=20180311011603"
       title="Hello there!"
       previewText="This is my first post!"
     />
     <PostPreview
       id="2"
+      v-bind:is-admin="isAdmin"
       thumbnail="https://vignette.wikia.nocookie.net/ncaa-athletics/images/7/73/Georgia_Tech_Yellow_Jackets.jpg/revision/latest?cb=20180311011603"
       title="Hello again!"
       previewText="This is my second post!"
     />
     <PostPreview
       id="3"
+      v-bind:is-admin="isAdmin"
       thumbnail="https://vignette.wikia.nocookie.net/ncaa-athletics/images/7/73/Georgia_Tech_Yellow_Jackets.jpg/revision/latest?cb=20180311011603"
       title="Hello the third time!"
       previewText="This is my third post!"
@@ -28,6 +31,12 @@ import PostPreview from "@/components/Posts/PostPreview";
 export default {
   components: {
     PostPreview
+  },
+  props: {
+    isAdmin: {
+      type: Boolean,
+      default: false
+    }
   }
 };
 </script>

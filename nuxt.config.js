@@ -48,6 +48,12 @@ export default {
    */
   modules: [],
   /*
+   ** TailwindCSS devModules
+   */
+  devModules: [
+    '@nuxtjs/tailwindcss'
+  ],
+  /*
    ** Build configuration
    */
   build: {

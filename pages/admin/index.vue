@@ -2,11 +2,14 @@
 <template>
   <div class="admin-page">
     <section class="new-post">
-      <button @click="$router.push('/admin/new-post')">Create Post</button>
+      <button
+        class="bg-gray-400 text-black font-bold py-2 px-4 rounded"
+        @click="$router.push('/admin/new-post')"
+      >Create Post</button>
     </section>
     <section class="existing-posts">
       <h1>Existing posts</h1>
-      <PostList />
+      <PostList isAdmin />
     </section>
   </div>
 </template>
